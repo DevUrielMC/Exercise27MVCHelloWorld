@@ -2,47 +2,49 @@ package com.exercise27mvchelloworld.model;
 
 public class UserModel 
 {
-	private byte edad=0;
-	private String nombre="";
-	private int id=0;
-	
-	public byte getEdad() 
+	private int id;
+	private String name;
+	private short age;
+
+	public UserModel()
 	{
-		return this.edad;
 	}
-	
-	public void setEdad(byte edad)
+	public UserModel(int id)
 	{
-		this.edad=edad;
+		this.id = id;
+		this.name="";
+		this.age=0;
 	}
-	
-	
-	public String getNombre() 
+	public UserModel(int id, String name, short age)
 	{
-		return this.nombre;
-	}
-	
-	public void setNombre(String nombre)
-	{
-		this.nombre=nombre;
-	}
-	
-	
-	public int getId() 
-	{
-		return this.id;
-	}
-	
-	public void setId(int id)
-	{
-		this.id=id;
+		this.id = id;
+		this.name=name;
+		this.age=age;
 	}
 
-	public String toString()
+	public int getId()
 	{
-		String datos;
-		datos= "El nombre es: "+this.nombre+" La edad es: "+this.edad+ "  el id es: "+this.id;
-		return datos;
+		return id;
+	}
+	public void setId(int id)
+	{
+		this.id = id;
+	}
+	public String getName()
+	{
+		return name;
+	}
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	public short getAge()
+	{
+		return age;
+	}
+	public void setAge(short age)
+	{
+		this.age = age;
 	}
 
 }
